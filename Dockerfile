@@ -47,6 +47,7 @@ WORKDIR /deploy/app
 # Set Python path
 ENV PYTHONPATH=/deploy
 
-EXPOSE 8080
+EXPOSE 5080
 
-CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
+#CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
+CMD [ python /deploy/app/main.app /deploy/app/test.txt ]
