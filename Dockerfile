@@ -25,6 +25,7 @@ RUN apk --update --repository http://dl-4.alpinelinux.org/alpine/edge/community 
     && rm -rf /tmp/glibc*apk /var/cache/apk/*
 
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
+    echo 'Europe/London' >  /etc/timezone && \
     curl https://repo.continuum.io/miniconda/Miniconda3-4.3.27-Linux-x86_64.sh -o ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -f -b -p /opt/conda && \
     rm ~/miniconda.sh
