@@ -35,6 +35,7 @@ ENV PATH /opt/conda/bin:$PATH
 # Install dependencies via Anaconda
 RUN mkdir -p /deploy/app
 COPY app/requirements.txt /deploy/app/requirements.txt
+COPY gunicorn_config.py /deploy/gunicorn_config.py
 RUN conda install -y --file /deploy/app/requirements.txt
 
 RUN pip install apscheduler
