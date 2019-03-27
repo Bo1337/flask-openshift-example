@@ -9,6 +9,7 @@ import sys
 from flask import Flask
 from apscheduler.schedulers.background import BackgroundScheduler
 
+time = datetime.now()
 HOST_NAME = os.environ.get('OPENSHIFT_APP_DNS', 'localhost')
 APP_NAME = os.environ.get('OPENSHIFT_APP_NAME', 'flask')
 IP = os.environ.get('OPENSHIFT_PYTHON_IP', '127.0.0.1')
