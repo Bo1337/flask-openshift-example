@@ -48,6 +48,4 @@ WORKDIR /deploy/app
 ENV PYTHONPATH=/deploy
 
 EXPOSE 5080
-ENV fileName='/mnt/test.txt'
 CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
-#CMD [ "python main.py /deploy/app/test.txt" ]
