@@ -18,10 +18,11 @@ HOME_DIR = os.environ.get('OPENSHIFT_HOMEDIR', os.getcwd())
 log = logging.getLogger(__name__)
 app = Flask(__name__)
 
-if len(sys.argv[1]) >= 2:
-    fileName = sys.argv[1]
-else:
-    fileName = "/tmp/test.txt"
+#if len(sys.argv[1]) >= 2:
+#    fileName = sys.argv[1]
+#else:
+#    fileName = "/tmp/test.txt"
+fileName = "/tmp/test.txt"
 
 def print_date_time():
 
