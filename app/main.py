@@ -22,7 +22,7 @@ app = Flask(__name__)
 #    fileName = sys.argv[1]
 #else:
 #    fileName = "/tmp/test.txt"
-#fileName = "/tmp/test.txt"
+fileName = "/mnt/tst1/test.txt"
 
 def print_date_time():
 
