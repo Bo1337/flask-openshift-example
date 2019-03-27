@@ -1,5 +1,5 @@
 FROM alpine:3.6
-LABEL maintainer="dat.tran@idealo.de"
+LABEL maintainer="idmitrij@redhat.com"
 
 # Install miniconda
 RUN apk --update --repository http://dl-4.alpinelinux.org/alpine/edge/community add \
