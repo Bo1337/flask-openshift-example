@@ -41,7 +41,6 @@ RUN conda install -y --file /deploy/app/requirements.txt
 RUN pip install apscheduler
 
 # Deploy application
-COPY gunicorn_config.py /deploy/gunicorn_config.py
 COPY app /deploy/app
 WORKDIR /deploy/app
 
@@ -49,6 +48,6 @@ WORKDIR /deploy/app
 ENV PYTHONPATH=/deploy
 
 EXPOSE 5080
-
+ENV fileName='/mnt/test.txt'
 CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
 #CMD [ "python main.py /deploy/app/test.txt" ]
