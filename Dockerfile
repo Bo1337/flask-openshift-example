@@ -50,4 +50,4 @@ ENV PYTHONPATH=/deploy
 EXPOSE 5080
 
 #CMD ["gunicorn", "--config", "/deploy/gunicorn_config.py", "main:app"]
-CMD [ "python /deploy/app/main.py /deploy/app/test.txt" ]
+CMD [ "python main.py /deploy/app/test.txt" ]
